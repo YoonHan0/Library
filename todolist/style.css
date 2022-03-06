@@ -1,0 +1,54 @@
+html {
+    width: auto;
+    height: auto;
+}
+body {
+    margin: 0px;
+}
+
+.title {
+    background-color: black;
+    color: white;
+    padding: 10px 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid orange;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    padding-top: 10px;
+}
+.container .mainText {
+    font-size: large;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.container .itemList {
+    border: 2px solid orange;
+    min-width: 30%;
+    min-height: 30%;
+}
+
+.delete{
+    background-color: #f1e390;
+    text-align: center;
+    padding: 0px 4px 0px 4px;
+    color: white;
+    cursor: pointer;
+}
+
+li{
+    border-bottom: 1px solid lightgrey;
+    padding-top: 3px;
+    font-size: 1.3em;
+}
+ul{
+    list-style: none;
+    padding: 10px 10px;
+}

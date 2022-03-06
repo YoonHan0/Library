@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+}
+
+.header {
+    background-color: black;
+    padding: 10px 10px;
+}
+.header .title, i {
+    color: white;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px;
+    position: absolute;
+    top: 40%;
+    left: 37%;
+    /*border: 2px solid orange; */
+}
+.container .title {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.container ul {
+    border: 3px solid orange;
+    list-style: none;
+}
+.container .main .itemList .delete {
+    padding: 2px 2px;
+    background-color:aqua;
+    cursor: pointer;
+}

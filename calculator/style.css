@@ -1,0 +1,58 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.title {
+    background-color: beige;
+    border: 3px solid skyblue;
+    padding: 10px 10px;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .mainTitle {
+    font-size: x-large;
+    font-weight: bold;
+    border-bottom: solid orange 5px;
+    width: 100%;
+    text-align: center;
+}
+.container .calculator {
+    border: 3px solid orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.container .calculator .displayNum {
+    margin-top: 3px;
+    padding: 5px 5px;
+    text-align: right;
+}
+.container .calculator .mainForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 15px;
+    width: 100%;
+}
+.container .calculator .mainForm .fristRow, .secondRow, .thirdRow, .fourRow {
+    display: flex;
+    justify-content: space-around;
+}
+.container .calculator .mainForm input {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+.fourRow input:nth-child(1) { flex-grow: 1;}
+.fourRow input:nth-child(2) { flex-grow: 4;}
+.fourRow input:nth-child(3) { flex-grow: 1;}
