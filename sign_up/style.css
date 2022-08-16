@@ -1,0 +1,54 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background-color: rgb(240, 190, 98);
+}
+
+.container_contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid black;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 2px 2px 2px 2px gray;
+
+    margin-top: 300px;          /* 위아래 정렬을 어케 하지.. */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 15px;
+
+    max-width: 300px;
+
+    background-color: rgb(159, 213, 235);
+}
+.container_contents h1 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.container_contents .signup_input {
+    margin-bottom: 20px;
+}
+.container_contents .signup_input input{
+    margin-bottom: 8px;
+}
+
+.container_contents .signup_Btn input{
+    padding: 3px 5px;
+    border: 1px solid rgb(139, 134, 134);
+    border-radius: 5px 5px 5px 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.signup_input {
+    display: flex;
+    flex-direction: column;
+}
