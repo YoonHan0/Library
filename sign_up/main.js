@@ -7,7 +7,7 @@
         display_name 딱히 필요없을듯
 */
 
-function signUp() {
+function signUp() {         // 회원가입하는 함수
     var id = document.getElementById("id").value;
     var pw = document.getElementById("pw").value;
     var confirm_pw = document.getElementById("confirm-pw").value;
@@ -32,9 +32,20 @@ function signUp() {
             }
             else {
                 alert("회원가입 완료!");                       // 회원가입 완료!
+                console.log("회원가입 완료!");
 
                 var elem = document.createElement('ul');
-                elem.innerHTML = `<li>--------------------------</li><li>이름: ${display_name}</li><li>아이디: ${id}</li><li>비밀번호 : ${pw}</li>`;
+                elem.innerHTML = 
+                `<li>--------------------------</li>
+                <div class="createMember">
+                    <input type="checkbox" class="checkBox">
+                    <div>
+                        <li>이름: ${display_name}</li>
+                        <li>아이디: ${id}</li>
+                        <li>비밀번호 : ${pw}</li>
+                    </div>
+                </div>`;
+
                 document.querySelector('.check_data').append(elem);     // 회원가입이 완료되면 회원조회에 추가
 
                 id = "";
@@ -46,13 +57,25 @@ function signUp() {
     }
 }
 
-function check_Member() {
+function check_Member() {               // 회원조회 함수
     var member = document.querySelector('.check_data');
     console.log("회원조회!");
+    
     if(member.style.display=='none') { 		
     	member.style.display = 'flex';
     }
     else {
         member.style.display = 'none';
+    }
+}
+
+function delete_Member() {               // 회원삭제 함수
+    var list = document.querySelectorAll(".checkBox");
+    console.log("회원삭제!");
+
+    for(let i =0; i<list.length; i++) {
+        if(list[i].checked) {
+            list[i].parentElement.parentElement.remove();
+        }
     }
 }

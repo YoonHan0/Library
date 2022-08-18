@@ -83,21 +83,29 @@ form {
     margin-bottom: 20px;
     font-weight: bold;
 }
-.check_contents .check_data {
+.check_contents .check_data {       /* 추가될 애들의 ul태그 */
     display: none;
     flex-direction: column;
 
     margin-bottom: 40px;
 }
-.check_contents .check_Btn input{           /* 회원확인 Btn */
+.check_data .createMember {         /* 새로 만들어질 리스트 */
+    display: flex;
+}
+.check_contents .check_Btn {         /* 회원조회+삭제 버튼들의 container */
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+.check_contents .check_Btn input:nth-of-type(1) {   /* 회원조회 Btn */
+    margin-right: 8px;
+}
+.check_contents .check_Btn input {           /* 회원확인 Btn + 회원삭제 Btn */
     padding: 3px 5px;
     border: 1px solid black;
     border-radius: 5px 5px 5px 5px;
     background-color: rgb(90, 189, 227);
-
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
 
     font-weight: bold;
 }
