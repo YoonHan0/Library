@@ -31,8 +31,28 @@ function signUp() {
                 alert("비밀번호가 일치하지 않습니다!");         // 비밀번호 확인 틀림
             }
             else {
-                alert("회원가입 완료!");
+                alert("회원가입 완료!");                       // 회원가입 완료!
+
+                var elem = document.createElement('ul');
+                elem.innerHTML = `<li>--------------------------</li><li>이름: ${display_name}</li><li>아이디: ${id}</li><li>비밀번호 : ${pw}</li>`;
+                document.querySelector('.check_data').append(elem);     // 회원가입이 완료되면 회원조회에 추가
+
+                id = "";
+                pw = "";
+                confirm_pw = "";
+                display_name = "";                          // 회원가입 완료 후 입력되어 있던 값들 사라지게 함
             }
         }
+    }
+}
+
+function check_Member() {
+    var member = document.querySelector('.check_data');
+    console.log("회원조회!");
+    if(member.style.display=='none') { 		
+    	member.style.display = 'flex';
+    }
+    else {
+        member.style.display = 'none';
     }
 }

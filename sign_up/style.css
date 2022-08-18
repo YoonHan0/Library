@@ -3,10 +3,21 @@
     margin: 0px;
 }
 body {
-    background-color: rgb(240, 190, 98);
+    background-color: rgb(224, 224, 224);
 }
 
-.container_contents {
+.container {                    /* 전체를 감싸고 있는 container */
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 300px;          /* 위아래 정렬을 어케 하지.. */
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 800px;
+}
+
+.signup_contents {              /* 회원가입에 대한 박스 */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,30 +27,29 @@ body {
     border-radius: 10px 10px 10px 10px;
     box-shadow: 2px 2px 2px 2px gray;
 
-    margin-top: 300px;          /* 위아래 정렬을 어케 하지.. */
-    margin-left: auto;
-    margin-right: auto;
-    padding: 40px 15px;
+    padding: 40px 60px;
+    
 
-    max-width: 300px;
-
-    background-color: rgb(159, 213, 235);
+    background-color: rgb(90, 189, 227);
 }
-.container_contents h1 {
+.signup_contents h1 {
     margin-bottom: 20px;
     font-weight: bold;
 }
-.container_contents .signup_input {
+.signup_contents .signup_input {
     margin-bottom: 20px;
 }
-.container_contents .signup_input input{
+.signup_contents .signup_input input{
     margin-bottom: 8px;
 }
 
-.container_contents .signup_Btn input{
+.signup_contents .signup_Btn input{                 /* 회원가입 Btn */
     padding: 3px 5px;
-    border: 1px solid rgb(139, 134, 134);
+    border: 1px solid black;
     border-radius: 5px 5px 5px 5px;
+    background-color: rgb(212, 142, 12);
+
+    font-weight: bold;
 }
 
 form {
@@ -51,4 +61,43 @@ form {
 .signup_input {
     display: flex;
     flex-direction: column;
+}
+
+                /* --------------------------------- 회원확인을 위한 css ------------------------------------- */
+
+.check_contents {                           /* 회원확인을 위한 박스 */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    border: 2px solid black;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 2px 2px 2px 2px gray;
+
+    padding: 40px 60px;
+
+    background-color: rgb(212, 142, 12);
+}
+
+.check_contents h1 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.check_contents .check_data {
+    display: none;
+    flex-direction: column;
+
+    margin-bottom: 40px;
+}
+.check_contents .check_Btn input{           /* 회원확인 Btn */
+    padding: 3px 5px;
+    border: 1px solid black;
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgb(90, 189, 227);
+
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+
+    font-weight: bold;
 }
