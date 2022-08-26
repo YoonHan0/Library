@@ -12,12 +12,12 @@ class TOC extends Component {
         lists.push(
         <li key={data[i].id}>
           <a href={"/content/"+data[i].id}
-            data-id={data[i].id}
-            onClick={function(e){
+            //data-id={data[i].id}
+            onClick={function(id, e){
               e.preventDefault();
               //console.log(e.target.dataset.id); 1, 2, 3
-              this.props.onChangePage(e.target.dataset.id);
-            }.bind(this)}
+              this.props.onChangePage(id);
+            }.bind(this, data[i].id)}
           >{data[i].title}</a>
         </li>);
         i += 1;
