@@ -10,8 +10,9 @@ import Control from './components/Control';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.max_content_id = 3;  //이 객체는 state로 안 하는 이유 : UI에 전혀 영향을 주지않는 객체이므로, 불필요한 rendering을 줄이기 위해서 (크게 상관은 없음)
     this.state = {
-      mode:'read',
+      mode:'create',
       selected_contents_id:2,   // 기본값을 2로 정함
       subject:{title:"WEB", sub:"world wide web!"},
       welcome:{title:"React", desc:"Hello React!!"},
@@ -43,7 +44,15 @@ class App extends Component {
       _article = <ReadContent title={_title} desc={_desc}></ReadContent>
     }
     else if(this.state.mode === 'create') {
-      _article = <CreateContent></CreateContent>
+      _article = <CreateContent onSubmit={function(_title, _desc){
+        // add state contents
+        console.log(_title, _desc);
+        this.max_content_id = this.max_content_id + 1;  //max id값 증가
+        this.state.contents.push({id:this.max_content_id, title:_title, desc:_desc});
+        this.setState({
+          contents : this.state.contents
+        });
+      }.bind(this)} ></CreateContent>
     }
     return (
       <div className="App">
