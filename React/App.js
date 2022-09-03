@@ -48,9 +48,14 @@ class App extends Component {
         // add state contents
         console.log(_title, _desc);
         this.max_content_id = this.max_content_id + 1;  //max id값 증가
-        this.state.contents.push({id:this.max_content_id, title:_title, desc:_desc});
+        // this.state.contents.push({
+        //   id:this.max_content_id, title:_title, desc:_desc}
+        //   );
+        var _contents = this.state.contents.concat(
+          {id:this.max_content_id, title:_title, desc:_desc}
+        );  // concat()을 사용하면 return값이 존재함
         this.setState({
-          contents : this.state.contents
+          contents : _contents
         });
       }.bind(this)} ></CreateContent>
     }
