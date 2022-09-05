@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="coffeeList">
+        <item>커피종류</item>
+        <item>아이스아메리카노</item>
+        <item>카페라떼</item>
+        <item>돌체라떼</item>
+    </string-array>
+
+
+</resources>
