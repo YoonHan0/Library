@@ -1,0 +1,13 @@
+.your-class {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.your-class button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+.your-class div {
+    text-align: center;
+}
